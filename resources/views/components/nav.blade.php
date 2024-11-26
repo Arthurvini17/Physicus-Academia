@@ -1,5 +1,5 @@
-<header class="bg-slate-950 ">
-    <nav class="flex items-center justify-between p-5 text-white font-poppins">
+<header class="bg-indigo-600 ">
+    <nav class="flex items-center justify-between p-5 font-bold text-white font-poppins">
         <div>Physicus</div>
         <ul class="flex gap-2">
             @guest
