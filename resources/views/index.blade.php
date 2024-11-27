@@ -5,9 +5,7 @@
 
 @section('content')
 
-<x-nav>
 
-</x-nav>
 <div>
     <div class="relative">
         <img src="{{ asset('images/Ramon-inicio.jpg') }}" alt="" class="w-full h-auto">
@@ -29,7 +27,6 @@
         </div>
     </div>
 
-    <x-planos></x-planos>
 </div>
 
 @endsection
