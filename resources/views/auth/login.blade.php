@@ -28,13 +28,7 @@
                 @enderror
             </div>
 
-            <div>
-                <label for="password">Senha Do Funcionario</label>
-                <input type="password" name="password" id="password">
-                @error('password')
-                <div class="error-message">{{ $message }}</div>
-                @enderror
-            </div>
+           
 
             <div>
                 <button type="submit">Logar</button>

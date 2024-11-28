@@ -11,9 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('planos', function (Blueprint $table) {
-            $table->unsignedBigInteger('funcionario_id')->nullable();
-            $table->foreign('funcionario_id')->references('id')->on('funcionarios')->onDelete('cascade');
+        Schema::table('funcionarios', function (Blueprint $table) {
+            $table->string('email')->unique();
         });
     }
 
@@ -22,8 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('planos', function (Blueprint $table) {
-            Schema::dropIfExists('planos');
+        Schema::table('funcionarios', function (Blueprint $table) {
+            //
         });
     }
 };

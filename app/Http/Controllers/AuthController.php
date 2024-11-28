@@ -19,17 +19,14 @@ class AuthController extends Controller
         $credentials  = $request->validate([
             'name_funcionario' => ['required'],
             'email' => ['required', 'email'],
-            'password' => ['required'],
         ], [
             'name_funcionario' => 'Coloque o nome do usuario',
             'email.required' => 'Esse email tem que ser preenchido',
-            'password' => 'Preencha esse campo',
         ]);
 
         $remember = $request->has('remember');
         if (Auth::guard('web')->attempt([
             'email' => $credentials['email'],
-            'password' => $credentials['password']
         ], $remember)) {
             $request->session()->regenerate();
             return redirect()->route('index');
@@ -38,5 +35,5 @@ class AuthController extends Controller
                 'email' => 'As credenciais fornecidas estão incorretas.',
             ])->onlyInput('email');
         }
-    }        
+    }
 }

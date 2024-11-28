@@ -17,6 +17,8 @@
     <main>
         @yield('content')
     </main>
+
+    @include('sections.planos')
 </body>
 
 </html>
