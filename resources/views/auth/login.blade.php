@@ -20,6 +20,7 @@
                 <div class="error-message">{{ $message }}</div>
                 @enderror
             </div>
+
             <div>
                 <label for="email">Email Do Funcionario</label>
                 <input type="email" name="email" id="email">
@@ -28,8 +29,13 @@
                 @enderror
             </div>
 
-           
-
+            <div>
+                <label for="password">Senha do funcionario</label>
+                <input type="password" name="password" id="password">
+                @error('password')
+                <div class="error-message">{{ $message }}</div>
+                @enderror
+            </div>
             <div>
                 <button type="submit">Logar</button>
             </div>

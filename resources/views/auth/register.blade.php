@@ -18,13 +18,18 @@
             <form action="{{route('register_user')}}" method="post">
                 @csrf
                 <div>
-                    <label for="name_funcionario">Nome Do Aluno</label>
-                    <input type="text" name="name" id="name_funcionario">
+                    <label for="name">Nome Do Aluno</label>
+                    <input type="text" name="name_funcionario" id="name">
                 </div>
 
                 <div>
                     <label for="email">Email Do Usuario</label>
                     <input type="email" name="email" id="email">
+                </div>
+
+                <div>
+                    <label for="password">Senha do funcionario</label>
+                    <input type="password" name="password" id="password">
                 </div>
                 <div>
                     <button type="submit">Registrar</button>

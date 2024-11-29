@@ -8,6 +8,7 @@
             @endguest
             <li></li>
             @auth
+            <p> Olá, {{Auth::user()->name_funcionario}}</p>
             <li><a href="#">Sair</a></li>
             @endauth
         </ul>

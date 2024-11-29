@@ -11,11 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('funcionarios', function (Blueprint $table) {
-            $table->id();
-            $table->string('name_funcionario');
-            $table->string('cargo')->default('estagiario');
-            $table->timestamps();
+        Schema::table('funcionarios', function (Blueprint $table) {
+            $table->string('password');
         });
     }
 
@@ -24,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('funcionarios');
+        Schema::table('funcionarios', function (Blueprint $table) {
+            //
+        });
     }
 };
